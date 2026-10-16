@@ -16,7 +16,7 @@ import dev.ferriarnus.volcanicmason.settings.ModeSetting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.Tuple;
 import org.jetbrains.annotations.NotNull;
 
@@ -34,8 +34,8 @@ public class BuildingVolcanicMason extends AbstractBuilding {
     private static final String TAG_OLOCATION = "obsidian";
     private static final String TAG_BLOCATION = "basalt";
 
-    public static final ISettingKey<IntSetting> MINE_AMOUNT = new SettingKey<>(IntSetting.class, ResourceLocation.fromNamespaceAndPath(VolcanicMasonMod.MODID, "mineamount"));
-    public static final ISettingKey<ModeSetting> MODE = new SettingKey<>(ModeSetting.class, ResourceLocation.fromNamespaceAndPath(VolcanicMasonMod.MODID, "mode"));
+    public static final ISettingKey<IntSetting> MINE_AMOUNT = new SettingKey<>(IntSetting.class, Identifier.fromNamespaceAndPath(VolcanicMasonMod.MODID, "mineamount"));
+    public static final ISettingKey<ModeSetting> MODE = new SettingKey<>(ModeSetting.class, Identifier.fromNamespaceAndPath(VolcanicMasonMod.MODID, "mode"));
 
     protected BlockPos cobbleLocation;
     protected BlockPos stoneLocation;
@@ -150,7 +150,7 @@ public class BuildingVolcanicMason extends AbstractBuilding {
 
         @Override
         public void deserializeNBT(@NotNull HolderLookup.Provider provider, CompoundTag compound) {
-            mined = compound.getInt("mined");
+            mined = compound.getIntOr("mined", 0);
         }
 
         @Override

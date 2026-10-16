@@ -16,7 +16,7 @@ import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
@@ -34,7 +34,7 @@ import net.neoforged.neoforge.event.AddPackFindersEvent;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = VolcanicMasonMod.MODID)
+@EventBusSubscriber(modid = VolcanicMasonMod.MODID)
 @Mod(VolcanicMasonMod.MODID)
 public class VolcanicMasonMod {
     public static final String MODID = "volcanicmason";
@@ -55,21 +55,21 @@ public class VolcanicMasonMod {
     }
 
     @SubscribeEvent
-    public static void dataGeneratorSetup(final GatherDataEvent event) {
+    public static void dataGeneratorSetup(final GatherDataEvent.Server event) {
         final DataGenerator generator = event.getGenerator();
         RegistrySetBuilder enchRegBuilder = new RegistrySetBuilder().add(Registries.ENCHANTMENT, DefaultEnchantmentProvider::bootstrap);
         DatapackBuiltinEntriesProvider enchRegProvider = new DatapackBuiltinEntriesProvider(event.getGenerator().getPackOutput(), event.getLookupProvider(), enchRegBuilder, Set.of(Constants.MOD_ID, "minecraft"));
         generator.addProvider(true, enchRegProvider);
-        final CompletableFuture<HolderLookup.Provider> provider = enchRegProvider.getRegistryProvider().thenApply(p -> new DatagenLootTableManager(p, event.getExistingFileHelper()));
+        final CompletableFuture<HolderLookup.Provider> provider = enchRegProvider.getRegistryProvider().thenApply(p -> new DatagenLootTableManager(p, event.getResourceManager(PackType.SERVER_DATA)));
 
-        generator.addProvider(event.includeServer(), new VolcanicResearchProvider(generator.getPackOutput(), provider));
+        generator.addProvider(true, new VolcanicResearchProvider(generator.getPackOutput(), provider));
 
     }
 
     @SubscribeEvent
     public static void findPacks(AddPackFindersEvent event) {
         if (event.getPackType() == PackType.SERVER_DATA) {
-            event.addPackFinders(ResourceLocation.fromNamespaceAndPath(VolcanicMasonMod.MODID, "datapacks/no_research"), PackType.SERVER_DATA,
+            event.addPackFinders(Identifier.fromNamespaceAndPath(VolcanicMasonMod.MODID, "datapacks/no_research"), PackType.SERVER_DATA,
                     Component.literal("No Volcanic Mason Research"), PackSource.FEATURE, VolcanicMasonConfig.COMMON.NO_RESEARCH.get(), Pack.Position.TOP);
         }
     }

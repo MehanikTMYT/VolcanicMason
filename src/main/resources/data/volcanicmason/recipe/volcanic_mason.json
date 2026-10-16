@@ -2,21 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
-      "item": "minecraft:stone_pickaxe"
-    },
-    "L": {
-      "item": "minecraft:lava_bucket"
-    },
-    "W": {
-      "item": "minecraft:water_bucket"
-    },
-    "T": {
-      "item": "structurize:sceptergold"
-    },
-    "X": {
-      "tag": "minecraft:planks"
-    }
+    "B": "minecraft:stone_pickaxe",
+    "L": "minecraft:lava_bucket",
+    "W": "minecraft:water_bucket",
+    "T": "structurize:sceptergold",
+    "X": "#minecraft:planks"
   },
   "pattern": [
     "XTX",

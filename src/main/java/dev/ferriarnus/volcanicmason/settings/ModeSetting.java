@@ -20,7 +20,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -30,8 +30,8 @@ public class ModeSetting implements ISetting<Modes> {
     private Modes mode = Modes.COBBLESTONE;
 
     @Override
-    public ResourceLocation getLayoutItem() {
-        return ResourceLocation.fromNamespaceAndPath("minecolonies", "gui/layouthuts/layoutcraftingsetting.xml");
+    public Identifier getLayoutItem() {
+        return Identifier.fromNamespaceAndPath("minecolonies", "gui/layouthuts/layoutcraftingsetting.xml");
     }
 
     @Override
@@ -73,7 +73,7 @@ public class ModeSetting implements ISetting<Modes> {
     public void render(ISettingKey<?> iSettingKey, Pane pane, ICommonSettingsModule iSettingsModuleView, IBuildingView iBuildingView, BOWindow boWindow) {
         ButtonImage triggerButton = pane.findPaneOfTypeByID("trigger", ButtonImage.class);
         triggerButton.setEnabled(this.isActive((ISettingsModuleView) iSettingsModuleView));
-        triggerButton.setText(Component.translatable(this.mode.getItem().getDescriptionId()));
+        triggerButton.setText(this.mode.getItem().getHoverName().copy());
         this.setHoverPane(iSettingKey, triggerButton, iSettingsModuleView);
         pane.findPaneOfTypeByID("iconfrom", ItemIcon.class).setItem(this.mode.getFluidStack());
         pane.findPaneOfTypeByID("iconto", ItemIcon.class).setItem(this.mode.getItem());
@@ -128,7 +128,7 @@ public class ModeSetting implements ISetting<Modes> {
         @Override
         public @NotNull ModeSetting deserialize(@NotNull HolderLookup.Provider provider, @NotNull IFactoryController iFactoryController, @NotNull CompoundTag compoundTag) throws Throwable {
             ModeSetting modeSetting = new ModeSetting();
-            modeSetting.mode = Modes.values()[compoundTag.getInt(TAG_MODULE)];
+            modeSetting.mode = Modes.values()[compoundTag.getIntOr(TAG_MODULE, 0)];
             return modeSetting;
         }
 

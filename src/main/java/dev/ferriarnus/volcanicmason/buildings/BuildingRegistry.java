@@ -16,7 +16,7 @@ import dev.ferriarnus.volcanicmason.VolcanicMasonMod;
 import dev.ferriarnus.volcanicmason.block.BlockRegistry;
 import dev.ferriarnus.volcanicmason.jobs.JobsRegistry;
 import dev.ferriarnus.volcanicmason.settings.ModeSetting;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
@@ -25,7 +25,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class BuildingRegistry {
 
-    private final static DeferredRegister<BuildingEntry> BUILDINGS = DeferredRegister.create(ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "buildings"), VolcanicMasonMod.MODID);
+    private final static DeferredRegister<BuildingEntry> BUILDINGS = DeferredRegister.create(Identifier.fromNamespaceAndPath(Constants.MOD_ID, "buildings"), VolcanicMasonMod.MODID);
 
     public static void register(IEventBus eventBus) {
         BUILDINGS.register(eventBus);
@@ -48,7 +48,7 @@ public class BuildingRegistry {
             .setBuildingBlock(BlockRegistry.VOLCANIC_MASON.get())
             .setBuildingProducer(BuildingVolcanicMason::new)
             .setBuildingViewProducer(() -> EmptyView::new)
-            .setRegistryName(ResourceLocation.fromNamespaceAndPath(VolcanicMasonMod.MODID, "volcanic_mason"))
+            .setRegistryName(Identifier.fromNamespaceAndPath(VolcanicMasonMod.MODID, "volcanic_mason"))
             .addBuildingModuleProducer(VOLCANIC_MASON_WORK)
             .addBuildingModuleProducer(VOLCANIC_MASON_CRAFT)
             .addBuildingModuleProducer(VOLCANIC_MASON_SETTINGS)

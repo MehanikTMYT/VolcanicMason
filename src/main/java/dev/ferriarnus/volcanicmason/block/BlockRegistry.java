@@ -1,6 +1,7 @@
 package dev.ferriarnus.volcanicmason.block;
 
 import com.minecolonies.api.items.ItemBlockHut;
+import com.minecolonies.api.util.RegistryConstructionContext;
 import dev.ferriarnus.volcanicmason.VolcanicMasonMod;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -24,8 +25,8 @@ public class BlockRegistry {
         CREATIVE_MODE_TABS.register(event);
     }
 
-    public static final DeferredBlock<VolcanicMasonHutBlock> VOLCANIC_MASON = BLOCKS.register("volcanic_mason", VolcanicMasonHutBlock::new);
-    public static final DeferredItem<ItemBlockHut> VOLCANIC_MASON_ITEM = ITEMS.register("volcanic_mason", () -> new ItemBlockHut(VOLCANIC_MASON.get(), new Item.Properties()));
+    public static final DeferredBlock<VolcanicMasonHutBlock> VOLCANIC_MASON = BLOCKS.register("volcanic_mason", id -> RegistryConstructionContext.constructBlock(id, VolcanicMasonHutBlock::new));
+    public static final DeferredItem<ItemBlockHut> VOLCANIC_MASON_ITEM = ITEMS.registerItem("volcanic_mason", props -> new ItemBlockHut(VOLCANIC_MASON.get(), props.useBlockDescriptionPrefix()));
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> VOLCANIC_MASON_TAB = CREATIVE_MODE_TABS.register("volcanic_mason", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.volcanic_mason"))
