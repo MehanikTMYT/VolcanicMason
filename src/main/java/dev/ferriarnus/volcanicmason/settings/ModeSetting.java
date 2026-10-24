@@ -92,6 +92,10 @@ public class ModeSetting implements ISetting<Modes> {
     }
 
     public static class ModeSettingFactory implements IFactory<FactoryVoidInput, ModeSetting> {
+        private static Modes decodeMode(int ordinal) {
+            return ordinal >= 0 && ordinal < Modes.values().length ? Modes.values()[ordinal] : Modes.COBBLESTONE;
+        }
+
         private static final String TAG_MODULE = "value";
         public static final TypeToken<ModeSetting> MODE = TypeToken.of(ModeSetting.class);
 
@@ -128,7 +132,7 @@ public class ModeSetting implements ISetting<Modes> {
         @Override
         public @NotNull ModeSetting deserialize(@NotNull HolderLookup.Provider provider, @NotNull IFactoryController iFactoryController, @NotNull CompoundTag compoundTag) throws Throwable {
             ModeSetting modeSetting = new ModeSetting();
-            modeSetting.mode = Modes.values()[compoundTag.getIntOr(TAG_MODULE, 0)];
+            modeSetting.mode = decodeMode(compoundTag.getIntOr(TAG_MODULE, 0));
             return modeSetting;
         }
 
@@ -141,7 +145,7 @@ public class ModeSetting implements ISetting<Modes> {
         @Override
         public @NotNull ModeSetting deserialize(@NotNull IFactoryController iFactoryController, @NotNull RegistryFriendlyByteBuf registryFriendlyByteBuf) throws Throwable {
             ModeSetting modeSetting = new ModeSetting();
-            modeSetting.mode = Modes.values()[registryFriendlyByteBuf.readInt()];
+            modeSetting.mode = decodeMode(registryFriendlyByteBuf.readInt());
             return modeSetting;
         }
     }

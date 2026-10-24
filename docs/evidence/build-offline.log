@@ -1,0 +1,60 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.2.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Enabling dist annotations on PMJ
+
+> Task :neoFormListLibraries UP-TO-DATE
+> Task :neoFormListTransformLibraries UP-TO-DATE
+> Task :cacheVersionManifest26.1.2 UP-TO-DATE
+> Task :cacheVersionExecutableClient26.1.2 UP-TO-DATE
+> Task :cacheVersionExecutableServer26.1.2 UP-TO-DATE
+> Task :neoFormSetup UP-TO-DATE
+> Task :neoFormDecompile UP-TO-DATE
+> Task :neoFormPatch UP-TO-DATE
+> Task :neoFormPatchUserDev UP-TO-DATE
+
+> Task :neoFormTransformSource
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.intellij.util.containers.Unsafe (file:/root/.gradle/caches/modules-2/files-2.1/net.neoforged.jst/jst-cli-bundle/2.0.1/6c22111132c294caf1103eb62ecf31b89813c015/jst-cli-bundle-2.0.1.jar)
+WARNING: Please consider reporting this to the maintainers of class com.intellij.util.containers.Unsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+
+The message received from the daemon indicates that the daemon has disappeared.
+Build request sent: Build{id=23619a3a-4ca1-468c-ab16-c880c7c659ba, currentDir=/root/home/forks/worktrees/volcanicmason-26.1.2.81}
+Attempting to read last messages from the daemon log...
+Daemon pid: 2729503
+  log file: /root/.gradle/daemon/9.2.1/daemon-2729503.out.log
+----- Last 20 lines from daemon log file - daemon-2729503.out.log -----
+2026-10-24T12:28:49.606+0300 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2026-10-24T12:28:49.607+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2026-10-24T12:28:49.607+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2026-10-24T12:28:49.617+0300 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=23619a3a-4ca1-468c-ab16-c880c7c659ba, currentDir=/root/home/forks/worktrees/volcanicmason-26.1.2.81}. Dispatching build started information...
+2026-10-24T12:28:49.618+0300 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 33: dispatching org.gradle.launcher.daemon.protocol.BuildStarted@76ed3c00
+2026-10-24T12:28:49.624+0300 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: [PATH, SHELL, LC_TERMINAL, SSH_CLIENT, OLDPWD, USER, LANG, DBUS_SESSION_BUS_ADDRESS, XDG_SESSION_ID, XDG_SESSION_TYPE, SSH_CONNECTION, LC_ALL, LOGNAME, LC_CTYPE, XDG_RUNTIME_DIR, PWD, SHLVL, HOME, XDG_SESSION_CLASS, _]
+2026-10-24T12:28:49.633+0300 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2026-10-24T12:28:49.634+0300 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 2729503). The daemon log file: /root/.gradle/daemon/9.2.1/daemon-2729503.out.log
+2026-10-24T12:28:49.645+0300 [DEBUG] [org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon] Requesting daemon stop after processing Build{id=23619a3a-4ca1-468c-ab16-c880c7c659ba, currentDir=/root/home/forks/worktrees/volcanicmason-26.1.2.81}
+2026-10-24T12:28:49.645+0300 [LIFECYCLE] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon will be stopped at the end of the build 
+2026-10-24T12:28:49.646+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Stop as soon as idle requested. The daemon is busy
+2026-10-24T12:28:49.646+0300 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon stop has been requested. Sleeping until state changes.
+2026-10-24T12:28:49.663+0300 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2026-10-24T12:28:49.665+0300 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=2d5d2e80-7d5e-44eb-8653-aaa1d76da585,javaHome=/usr/lib/jvm/java-25-openjdk-amd64,javaVersion=25,javaVendor=Ubuntu,daemonRegistryDir=/root/.gradle/daemon,pid=2729503,idleTimeout=120000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx1536m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+Enabling dist annotations on PMJ
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.intellij.util.containers.Unsafe (file:/root/.gradle/caches/modules-2/files-2.1/net.neoforged.jst/jst-cli-bundle/2.0.1/6c22111132c294caf1103eb62ecf31b89813c015/jst-cli-bundle-2.0.1.jar)
+WARNING: Please consider reporting this to the maintainers of class com.intellij.util.containers.Unsafe
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.----- End of the daemon log -----
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Gradle build daemon disappeared unexpectedly (it may have been killed or may have crashed)
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to generate a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.

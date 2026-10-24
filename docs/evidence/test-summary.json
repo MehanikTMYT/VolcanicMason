@@ -1,0 +1,23 @@
+{
+  "server-final3": {
+    "status": "PASS",
+    "checks": 47,
+    "clean_save_and_stop": true
+  },
+  "server-restart3": {
+    "status": "PASS",
+    "checks": 26,
+    "clean_save_and_stop": true
+  },
+  "build": {
+    "status": "PASS",
+    "log": "build-final3.log",
+    "junit": "NO-SOURCE"
+  },
+  "client": {
+    "status": "PARTIAL",
+    "main_menu": true,
+    "dependency_model_errors": 7,
+    "full_colony_gameplay": "NOT TESTED"
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "repo": "MineColonies",
+    "commit": "a2de8ded5d66f427a9f2eecf65f1e3c5af781e93",
+    "jar": "/root/home/forks/MineColonies/build/libs/minecolonies-1.1.1397-26.1.2.jar",
+    "sha256": "e9085e3eead8d1d0607186a4e32b8ce3f61ff5012f1cd061b14872c628d8a3af"
+  },
+  {
+    "repo": "BlockUI",
+    "commit": "e6a9033b31a312c087718862ba2d4f1bd27da62f",
+    "jar": "/root/home/forks/BlockUI/build/libs/blockui-0.0.1-26.1.2.jar",
+    "sha256": "b53532779136d4b4453a5b50c7bec6014d5a7b7339c1a2bc933fc7c8183308c3"
+  },
+  {
+    "repo": "Structurize",
+    "commit": "77b005d4d488e1bdb4c1015824dd7d013bace62a",
+    "jar": "/root/home/forks/Structurize/build/libs/structurize-0.0.1-26.1.2.jar",
+    "sha256": "9dbe1f5e9984e903ac51a3e54abb203044cd4c0d53be64113de9127c0d74d6c5"
+  },
+  {
+    "repo": "Domum-Ornamentum",
+    "commit": "eb06a561cc41569e77d527a1130be357069a02b3",
+    "jar": "/root/home/forks/Domum-Ornamentum/build/libs/domum-ornamentum-1.0.0-local-main.jar",
+    "sha256": "a7139f3b46901c9ce60bf25633fa94ad552babd14f910dfec7b9356d63fd3994"
+  },
+  {
+    "repo": "Piston-Unlimited",
+    "commit": "1a8d74587aa09d037fdd58aa07e40cfd551cfd2d",
+    "jar": "/root/home/forks/Piston-Unlimited/build/libs/multipiston-0.0.1-26.1.2.jar",
+    "sha256": "649b975c60f721eb3b1db25bd281ccc1474ced5a0aeab61ce644e79410396af6"
+  }
+]

@@ -1,0 +1,13 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="LGPLv3"
+[[mods]]
+modId="vmqa"
+version="1"
+displayName="Volcanic Mason integration probe"
+[[dependencies.vmqa]]
+modId="volcanicmason"
+type="required"
+versionRange="[1,)"
+ordering="AFTER"
+side="SERVER"

@@ -1,0 +1,195 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.2.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Enabling dist annotations on PMJ
+
+> Task :neoFormListLibraries UP-TO-DATE
+> Task :neoFormListTransformLibraries UP-TO-DATE
+> Task :cacheVersionManifest26.1.2 UP-TO-DATE
+> Task :cacheVersionExecutableClient26.1.2 UP-TO-DATE
+> Task :cacheVersionExecutableServer26.1.2 UP-TO-DATE
+> Task :neoFormSetup UP-TO-DATE
+> Task :neoFormDecompile UP-TO-DATE
+> Task :neoFormPatch UP-TO-DATE
+> Task :neoFormPatchUserDev UP-TO-DATE
+> Task :neoFormTransformSource UP-TO-DATE
+> Task :neoFormRecompile UP-TO-DATE
+> Task :supplyRawJarForneoFormJoined26.1.2-1 UP-TO-DATE
+> Task :selectRawArtifactNg_dummy_ng.net.neoforged_neoforge_26.1.2.81 UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :compileQaJava UP-TO-DATE
+> Task :neoFormJoined26.1.2-1DownloadAssets UP-TO-DATE
+> Task :neoFormJoined26.1.2-1ExtractNatives UP-TO-DATE
+> Task :processQaResources UP-TO-DATE
+> Task :qaClasses UP-TO-DATE
+
+> Task :runServer
+2026-10-24T09:34:08.154979505Z main WARN Advanced terminal features are not available in this environment
+[12:34:08] [main/INFO] [ne.ne.fm.st.Entrypoint/]: JVM Uptime at startup: 468ms
+[12:34:08] [main/INFO] [ne.ne.fm.lo.FMLLoader/]: Starting FancyModLoader version 11.0.15 (DEDICATED_SERVER in DEV)
+[12:34:08] [main/INFO] [ne.ne.fm.lo.FMLLoader/]: Game directory: /root/home/forks/worktrees/volcanicmason-26.1.2.81/run/server
+[12:34:08] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path GAMEDIR is /root/home/forks/worktrees/volcanicmason-26.1.2.81/run/server
+[12:34:08] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path JIJ_CACHEDIR is /root/home/forks/worktrees/volcanicmason-26.1.2.81/run/server/.cache/jij
+[12:34:08] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path MODSDIR is /root/home/forks/worktrees/volcanicmason-26.1.2.81/run/server/mods
+[12:34:08] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path CONFIGDIR is /root/home/forks/worktrees/volcanicmason-26.1.2.81/run/server/config
+[12:34:08] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path FMLCONFIG is /root/home/forks/worktrees/volcanicmason-26.1.2.81/run/server/config/fml.toml
+[12:34:08] [main/DEBUG] [ne.ne.fm.lo.EarlyServiceDiscovery/]: /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/earlydisplay/11.0.15/b254aa4ec40828f8ce65411dcb7fb9f6ce008064/earlydisplay-11.0.15.jar contains early service net.neoforged.neoforgespi.earlywindow.ImmediateWindowProvider
+[12:34:08] [ForkJoinPool.commonPool-worker-1/DEBUG] [ne.ne.fm.lo.EarlyServiceDiscovery/]: /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.15/69ddd98736a6b095783523404d1af8992842722/loader-11.0.15.jar contains early service net.neoforged.neoforgespi.locating.IModFileReader
+[12:34:08] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/earlydisplay/11.0.15/b254aa4ec40828f8ce65411dcb7fb9f6ce008064/earlydisplay-11.0.15.jar with languages []
+[12:34:08] [ForkJoinPool.commonPool-worker-1/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.15/69ddd98736a6b095783523404d1af8992842722/loader-11.0.15.jar with languages []
+[12:34:08] [main/INFO] [ne.ne.fm.lo.EarlyServiceDiscovery/]: Found 2 early service jars (out of 105) in 58ms
+[12:34:08] [main/INFO] [ne.ne.fm.lo.FMLLoader/]: Loading FML Early Services:
+[12:34:08] [main/INFO] [ne.ne.fm.lo.FMLLoader/]:  - /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/earlydisplay/11.0.15/b254aa4ec40828f8ce65411dcb7fb9f6ce008064/earlydisplay-11.0.15.jar
+[12:34:08] [main/INFO] [ne.ne.fm.lo.FMLLoader/]:  - /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.15/69ddd98736a6b095783523404d1af8992842722/loader-11.0.15.jar
+[12:34:08] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: Found 0 implementations of GraphicsBootstrapper:
+[12:34:08] [main/INFO] [ne.ne.fm.lo.ImmediateWindowHandler/]: Not loading early display in headless mode.
+[12:34:08] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: Found 4 implementations of IModFileCandidateLocator:
+[12:34:08] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	    1000 - [built-in] net.neoforged.fml.loading.moddiscovery.locators.GameLocator from /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.15/69ddd98736a6b095783523404d1af8992842722/loader-11.0.15.jar
+[12:34:08] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	    1000 - [built-in] net.neoforged.fml.loading.moddiscovery.locators.InDevFolderLocator from /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.15/69ddd98736a6b095783523404d1af8992842722/loader-11.0.15.jar
+[12:34:08] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	    1000 - [built-in] net.neoforged.fml.loading.moddiscovery.locators.InDevJarLocator from /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.15/69ddd98736a6b095783523404d1af8992842722/loader-11.0.15.jar
+[12:34:08] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	       0 - [built-in] net.neoforged.fml.loading.moddiscovery.locators.ModsFolderLocator from /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.15/69ddd98736a6b095783523404d1af8992842722/loader-11.0.15.jar
+[12:34:08] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: Found 2 implementations of IModFileReader:
+[12:34:08] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	       0 - net.neoforged.fml.loading.moddiscovery.readers.JarModsDotTomlModFileReader from /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.15/69ddd98736a6b095783523404d1af8992842722/loader-11.0.15.jar
+[12:34:08] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	   -1000 - net.neoforged.fml.loading.moddiscovery.readers.NestedLibraryModReader from /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.15/69ddd98736a6b095783523404d1af8992842722/loader-11.0.15.jar
+[12:34:08] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: Found 1 implementations of IDependencyLocator:
+[12:34:08] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	       0 - net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator from /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.15/69ddd98736a6b095783523404d1af8992842722/loader-11.0.15.jar
+[12:34:08] [main/DEBUG] [ne.ne.fm.lo.mo.lo.RequiredSystemFiles/]: Found NeoForge MANIFEST.MF in jar(/root/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.2.81/17cf8f8a1946194c7fa4beae83ec19d98d2e9022/neoforge-26.1.2.81-universal.jar)
+[12:34:08] [main/INFO] [ne.ne.fm.lo.mo.lo.GameLocator/]: Detected a joined NeoForge and Minecraft configuration. Applying filtering...
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file neoforge-26.1.2.81.jar with {minecraft} mods - versions {26.1.2}
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /root/home/forks/worktrees/volcanicmason-26.1.2.81/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/26.1.2.81/neoforge-26.1.2.81.jar with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /root/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.2.81/17cf8f8a1946194c7fa4beae83ec19d98d2e9022/neoforge-26.1.2.81-universal.jar
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file neoforge-26.1.2.81-universal.jar with {neoforge} mods - versions {26.1.2.81}
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /root/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.2.81/17cf8f8a1946194c7fa4beae83ec19d98d2e9022/neoforge-26.1.2.81-universal.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[3,]]]
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Found mixin config MixinConfig[config=neoforge.mixins.json, requiredMods=[], behaviorVersion=null]
+[12:34:09] [main/INFO] [ne.ne.fm.lo.mo.lo.InDevFolderLocator/CORE]: Got mod coordinates volcanicmason-26.1.2.81%%/root/home/forks/worktrees/volcanicmason-26.1.2.81/build/resources/main:volcanicmason-26.1.2.81%%/root/home/forks/worktrees/volcanicmason-26.1.2.81/build/classes/java/main:volcanicmason-26.1.2.81%%/root/home/forks/worktrees/volcanicmason-26.1.2.81/build/resources/qa:volcanicmason-26.1.2.81%%/root/home/forks/worktrees/volcanicmason-26.1.2.81/build/classes/java/qa from env
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /root/home/forks/worktrees/volcanicmason-26.1.2.81/build/resources/main
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file main with {vmqa} mods - versions {1}
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /root/home/forks/worktrees/volcanicmason-26.1.2.81/build/resources/main with languages [LanguageSpec[languageName=javafml, acceptedVersions=[4,)]]
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /root/home/forks/MineColonies/build/libs/minecolonies-1.1.1397-26.1.2.jar
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file minecolonies-1.1.1397-26.1.2.jar with {minecolonies} mods - versions {1.1.1397-26.1.2}
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /root/home/forks/MineColonies/build/libs/minecolonies-1.1.1397-26.1.2.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[4,)]]
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /root/home/forks/worktrees/volcanicmason-26.1.2.81/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/26.1.2.81/neoforge-26.1.2.81.jar because it was already located earlier
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /root/.m2/repository/com/ldtteam/multipiston/0.0.1-26.1.2/multipiston-0.0.1-26.1.2.jar
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file multipiston-0.0.1-26.1.2.jar with {multipiston} mods - versions {0.0.1-26.1.2}
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /root/.m2/repository/com/ldtteam/multipiston/0.0.1-26.1.2/multipiston-0.0.1-26.1.2.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[4,)]]
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /root/.m2/repository/com/ldtteam/structurize/0.0.1-26.1.2/structurize-0.0.1-26.1.2.jar
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file structurize-0.0.1-26.1.2.jar with {structurize} mods - versions {0.0.1-26.1.2}
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /root/.m2/repository/com/ldtteam/structurize/0.0.1-26.1.2/structurize-0.0.1-26.1.2.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[4,)]]
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /root/.m2/repository/com/ldtteam/blockui/0.0.1-26.1.2/blockui-0.0.1-26.1.2.jar
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file blockui-0.0.1-26.1.2.jar with {blockui} mods - versions {0.0.1-26.1.2}
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /root/.m2/repository/com/ldtteam/blockui/0.0.1-26.1.2/blockui-0.0.1-26.1.2.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[4,)]]
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /root/.m2/repository/com/ldtteam/domum-ornamentum/1.0.0-local/domum-ornamentum-1.0.0-local-main.jar
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file domum-ornamentum-1.0.0-local-main.jar with {domum_ornamentum} mods - versions {1.0.0-local}
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /root/.m2/repository/com/ldtteam/domum-ornamentum/1.0.0-local/domum-ornamentum-1.0.0-local-main.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[4,)]]
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /root/.m2/repository/dev/emi/emi-neoforge/1.1.24-semi151a6c88+26.1.2/emi-neoforge-1.1.24-semi151a6c88+26.1.2.jar
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file emi-neoforge-1.1.24-semi151a6c88+26.1.2.jar with {emi} mods - versions {1.1.24-semi151a6c88+26.1.2+neoforge}
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /root/.m2/repository/dev/emi/emi-neoforge/1.1.24-semi151a6c88+26.1.2/emi-neoforge-1.1.24-semi151a6c88+26.1.2.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[4,)]]
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Found mixin config MixinConfig[config=emi.mixins.json, requiredMods=[], behaviorVersion=null]
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Found mixin config MixinConfig[config=emi-neoforge.mixins.json, requiredMods=[], behaviorVersion=null]
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /root/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.2.81/17cf8f8a1946194c7fa4beae83ec19d98d2e9022/neoforge-26.1.2.81-universal.jar because it was already located earlier
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /root/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-neoforge/0.5.4/3cb0fec08c25e18fddf797fbdc1b9db83dc4e92f/mixinextras-neoforge-0.5.4.jar with languages []
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /root/home/forks/worktrees/volcanicmason-26.1.2.81/run/server/.cache/jij/6a464b1c603b716033f3561a0632a7cc7be17c9d75af1cab7f1db5fe98c3888a/mixinextras-neoforge-0.5.4.jar with languages []
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /root/home/forks/worktrees/volcanicmason-26.1.2.81/run/server/.cache/jij/909b72f1d8225a13c4f00a23b3a5d04217543745de857d98694d4943708fc969/net.neoforged.neoforge-coremods-26.1.2.81.jar with languages []
+[12:34:09] [main/WARN] [ne.ne.ja.se.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: library:mixinextras.neoforge. Using jar(/root/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-neoforge/0.5.4/3cb0fec08c25e18fddf797fbdc1b9db83dc4e92f/mixinextras-neoforge-0.5.4.jar)
+[12:34:09] [main/INFO] [ne.ne.fm.lo.mo.lo.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[12:34:09] [main/INFO] [ne.ne.fm.lo.mo.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Domum Ornamentum 1.0.0-local (domum_ornamentum)
+		MineColonies 1.1.1397-26.1.2 (minecolonies)
+		Minecraft 26.1.2 (minecraft)
+		Multi-Piston 0.0.1-26.1.2 (multipiston)
+		NeoForge 26.1.2.81 (neoforge)
+		SEMI 1.1.24-semi151a6c88+26.1.2+neoforge (emi)
+		Structurize 0.0.1-26.1.2 (structurize)
+		UI Library Mod 0.0.1-26.1.2 (blockui)
+		Volcanic Mason integration probe 1 (vmqa)
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.ModSorter/]: Configured system mods: [minecraft, neoforge]
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.ModSorter/]: Found system mod: minecraft
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.ModSorter/]: Found system mod: neoforge
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.ModSorter/LOADING]: Found 20 mod requirements (18 mandatory, 2 optional)
+[12:34:09] [main/DEBUG] [ne.ne.fm.lo.ModSorter/LOADING]: Found 1 mod requirements missing (1 mandatory, 0 optional)
+[12:34:09] [main/ERROR] [ne.ne.fm.lo.ModSorter/LOADING]: Missing or unsupported mandatory dependencies:
+	Mod ID: 'volcanicmason', Requested by: 'vmqa', Expected range: '[1,)', Actual version: '[MISSING]'
+[12:34:09] [main/ERROR] [ne.ne.fm.lo.FMLLoader/]: Mod vmqa requires volcanicmason 1 or above
+Currently, volcanicmason is not installed
+
+[12:34:09] [main/INFO] [ne.ne.fm.lo.FMLLoader/]: Closing FML Loader 5c87bfe2
+[12:34:09] [main/ERROR] [ne.ne.fm.lo.mo.BackgroundScanHandler/SCAN]: An error occurred scanning file composite(filtered(jar(/root/home/forks/worktrees/volcanicmason-26.1.2.81/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/26.1.2.81/neoforge-26.1.2.81.jar)), filtered(jar(/root/home/forks/worktrees/volcanicmason-26.1.2.81/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/26.1.2.81/neoforge-26.1.2.81.jar)))
+java.util.concurrent.CancellationException: null
+	at java.base/java.util.concurrent.CompletableFuture.cancel(CompletableFuture.java:2552) [?:?] {}
+	at net.neoforged.fml.loading.moddiscovery.ModFile.close(ModFile.java:246) [loader-11.0.15.jar:11.0] {}
+	at net.neoforged.fml.loading.FMLLoader.close(FMLLoader.java:239) [loader-11.0.15.jar:11.0] {}
+	at net.neoforged.fml.loading.FMLLoader.create(FMLLoader.java:415) [loader-11.0.15.jar:11.0] {}
+	at net.neoforged.fml.startup.Entrypoint.startup(Entrypoint.java:65) [loader-11.0.15.jar:11.0] {}
+	at net.neoforged.fml.startup.Server.main(Server.java:17) [loader-11.0.15.jar:11.0] {}
+[12:34:10] [main/ERROR] [ne.ne.fm.lo.mo.BackgroundScanHandler/SCAN]: An error occurred scanning file composite(filtered(jar(/root/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.2.81/17cf8f8a1946194c7fa4beae83ec19d98d2e9022/neoforge-26.1.2.81-universal.jar)))
+java.util.concurrent.CancellationException: null
+	at java.base/java.util.concurrent.CompletableFuture.cancel(CompletableFuture.java:2552) [?:?] {}
+	at net.neoforged.fml.loading.moddiscovery.ModFile.close(ModFile.java:246) [loader-11.0.15.jar:11.0] {}
+	at net.neoforged.fml.loading.FMLLoader.close(FMLLoader.java:239) [loader-11.0.15.jar:11.0] {}
+	at net.neoforged.fml.loading.FMLLoader.create(FMLLoader.java:415) [loader-11.0.15.jar:11.0] {}
+	at net.neoforged.fml.startup.Entrypoint.startup(Entrypoint.java:65) [loader-11.0.15.jar:11.0] {}
+	at net.neoforged.fml.startup.Server.main(Server.java:17) [loader-11.0.15.jar:11.0] {}
+[12:34:10] [main/ERROR] [ne.ne.fm.lo.mo.BackgroundScanHandler/SCAN]: An error occurred scanning file jar(/root/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-neoforge/0.5.4/3cb0fec08c25e18fddf797fbdc1b9db83dc4e92f/mixinextras-neoforge-0.5.4.jar)
+java.util.concurrent.CancellationException: null
+	at java.base/java.util.concurrent.CompletableFuture.cancel(CompletableFuture.java:2552) [?:?] {}
+	at net.neoforged.fml.loading.moddiscovery.ModFile.close(ModFile.java:246) [loader-11.0.15.jar:11.0] {}
+	at net.neoforged.fml.loading.FMLLoader.close(FMLLoader.java:245) [loader-11.0.15.jar:11.0] {}
+	at net.neoforged.fml.loading.FMLLoader.create(FMLLoader.java:415) [loader-11.0.15.jar:11.0] {}
+	at net.neoforged.fml.startup.Entrypoint.startup(Entrypoint.java:65) [loader-11.0.15.jar:11.0] {}
+	at net.neoforged.fml.startup.Server.main(Server.java:17) [loader-11.0.15.jar:11.0] {}
+[12:34:10] [main/INFO] [ne.ne.fm.ModLoader/]: Clearing ModLoader
+[12:34:10] [main/ERROR] [ne.ne.fm.st.Entrypoint/]: Failed to start FML: net.neoforged.fml.ModLoadingException: Loading errors encountered:
+	- Mod vmqa requires volcanicmason 1 or above
+	  Currently, volcanicmason is not installed
+	  
+
+	at net.neoforged.fml.loading.FMLLoader.create(FMLLoader.java:356)
+	at net.neoforged.fml.startup.Entrypoint.startup(Entrypoint.java:65)
+	at net.neoforged.fml.startup.Server.main(Server.java:17)
+
+net.neoforged.fml.startup.FatalStartupException: Failed to start FML: net.neoforged.fml.ModLoadingException: Loading errors encountered:
+	- Mod vmqa requires volcanicmason 1 or above
+	  Currently, volcanicmason is not installed
+	  
+
+	at net.neoforged.fml.startup.Entrypoint.startup(Entrypoint.java:71)
+	at net.neoforged.fml.startup.Server.main(Server.java:17)
+Caused by: net.neoforged.fml.ModLoadingException: Loading errors encountered:
+	- Mod vmqa requires volcanicmason 1 or above
+	  Currently, volcanicmason is not installed
+	  
+
+	at net.neoforged.fml.loading.FMLLoader.create(FMLLoader.java:356)
+	at net.neoforged.fml.startup.Entrypoint.startup(Entrypoint.java:65)
+	... 1 more
+
+> Task :runServer FAILED
+
+[Incubating] Problems report is available at: file:///root/home/forks/worktrees/volcanicmason-26.1.2.81/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':runServer'.
+> Process 'command '/usr/lib/jvm/java-25-openjdk-amd64/bin/java'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to generate a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.2.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 38s
+20 actionable tasks: 1 executed, 19 up-to-date

@@ -5,7 +5,7 @@ import com.minecolonies.api.colony.buildings.modules.AbstractBuildingModule;
 import com.minecolonies.api.colony.buildings.modules.IBuildingEventsModule;
 import com.minecolonies.api.colony.buildings.modules.IPersistentModule;
 import com.minecolonies.api.colony.buildings.modules.settings.ISettingKey;
-import com.minecolonies.api.equipment.ModEquipmentTypes;
+import dev.ferriarnus.volcanicmason.jobs.MasonEquipment;
 import com.minecolonies.api.util.BlockPosUtil;
 import com.minecolonies.api.util.ItemStackUtils;
 import com.minecolonies.core.colony.buildings.AbstractBuilding;
@@ -45,7 +45,7 @@ public class BuildingVolcanicMason extends AbstractBuilding {
 
     protected BuildingVolcanicMason(@NotNull IColony colony, BlockPos pos) {
         super(colony, pos);
-        keepX.put(itemStack -> ItemStackUtils.hasEquipmentLevel(itemStack, ModEquipmentTypes.pickaxe.get(), TOOL_LEVEL_WOOD_OR_GOLD, getMaxEquipmentLevel()), new Tuple<>(1, true));
+        keepX.put(itemStack -> ItemStackUtils.hasEquipmentLevel(itemStack, MasonEquipment.PICKAXE.get(), TOOL_LEVEL_WOOD_OR_GOLD, getMaxEquipmentLevel()), new Tuple<>(1, true));
     }
 
     @Override
@@ -54,18 +54,14 @@ public class BuildingVolcanicMason extends AbstractBuilding {
     }
 
     public BlockPos getBlockToMine() {
-        var pos = switch (this.getSetting(MODE).getValue()) {
+        loadPos();
+        return switch (this.getSetting(MODE).getValue()) {
             case COBBLESTONE -> cobbleLocation;
             case STONE -> stoneLocation;
             case OBSIDIAN -> obsidianLocation;
             case BASALT -> basaltLocation;
         };
 
-        if (pos == null) {
-            loadPos();
-        }
-
-        return pos;
     }
 
     public BlockPos getObsidianPos() {
@@ -120,9 +116,6 @@ public class BuildingVolcanicMason extends AbstractBuilding {
         if (!stonePos.isEmpty()) {
             stoneLocation = stonePos.iterator().next();
         }
-        if (!cobblePos.isEmpty()) {
-            cobbleLocation = cobblePos.iterator().next();
-        }
         if (!basaltPos.isEmpty()) {
             basaltLocation = basaltPos.iterator().next();
         }
@@ -134,29 +127,45 @@ public class BuildingVolcanicMason extends AbstractBuilding {
     public static class LimitedMiningModule extends AbstractBuildingModule implements IBuildingEventsModule, IPersistentModule {
 
         private int mined = 0;
+        private int miningDay = -1;
 
         public boolean canMine() {
             return mined < this.getBuilding().getSetting(MINE_AMOUNT).getValue();
         }
 
         public void mine() {
+            miningDay = getBuilding().getColony().getDay();
             mined++;
+            markDirty();
         }
 
         @Override
         public void serializeNBT(@NotNull HolderLookup.Provider provider, CompoundTag compound) {
             compound.putInt("mined", mined);
+            compound.putInt("miningDay", miningDay);
         }
 
         @Override
         public void deserializeNBT(@NotNull HolderLookup.Provider provider, CompoundTag compound) {
             mined = compound.getIntOr("mined", 0);
+            miningDay = compound.getIntOr("miningDay", -1);
         }
 
         @Override
         public void onWakeUp()
         {
-            this.mined = 0;
+            // Entity loading also invokes onWakeUp, even for an awake citizen.
+            final int day = getBuilding().getColony().getDay();
+            if (miningDay != day)
+            {
+                // Preserve legacy saves without a day marker on their first load.
+                if (miningDay != -1)
+                {
+                    mined = 0;
+                }
+                miningDay = day;
+                markDirty();
+            }
         }
     }
 

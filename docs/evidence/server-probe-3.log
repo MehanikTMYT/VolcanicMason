@@ -1,0 +1,288 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.2.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Enabling dist annotations on PMJ
+
+> Task :neoFormListLibraries UP-TO-DATE
+> Task :neoFormListTransformLibraries UP-TO-DATE
+> Task :cacheVersionManifest26.1.2 UP-TO-DATE
+> Task :cacheVersionExecutableClient26.1.2 UP-TO-DATE
+> Task :cacheVersionExecutableServer26.1.2 UP-TO-DATE
+> Task :neoFormSetup UP-TO-DATE
+> Task :neoFormDecompile UP-TO-DATE
+> Task :neoFormPatch UP-TO-DATE
+> Task :neoFormPatchUserDev UP-TO-DATE
+> Task :neoFormTransformSource UP-TO-DATE
+> Task :neoFormRecompile UP-TO-DATE
+> Task :supplyRawJarForneoFormJoined26.1.2-1 UP-TO-DATE
+> Task :selectRawArtifactNg_dummy_ng.net.neoforged_neoforge_26.1.2.81 UP-TO-DATE
+
+> Task :compileJava
+Note: /root/home/forks/worktrees/volcanicmason-26.1.2.81/src/main/java/dev/ferriarnus/volcanicmason/entity/ai/EntityAIVolcanicMason.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :neoFormJoined26.1.2-1DownloadAssets UP-TO-DATE
+> Task :neoFormJoined26.1.2-1ExtractNatives UP-TO-DATE
+
+> Task :runServer
+2026-10-24T09:41:36.507567451Z main WARN Advanced terminal features are not available in this environment
+[12:41:36] [main/INFO] [ne.ne.fm.st.Entrypoint/]: JVM Uptime at startup: 588ms
+[12:41:37] [main/INFO] [ne.ne.fm.lo.FMLLoader/]: Starting FancyModLoader version 11.0.15 (DEDICATED_SERVER in DEV)
+[12:41:37] [main/INFO] [ne.ne.fm.lo.FMLLoader/]: Game directory: /root/home/forks/worktrees/volcanicmason-26.1.2.81/run/server
+[12:41:37] [main/INFO] [ne.ne.fm.lo.EarlyServiceDiscovery/]: Found 2 early service jars (out of 104) in 200ms
+[12:41:37] [main/INFO] [ne.ne.fm.lo.FMLLoader/]: Loading FML Early Services:
+[12:41:37] [main/INFO] [ne.ne.fm.lo.FMLLoader/]:  - /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/earlydisplay/11.0.15/b254aa4ec40828f8ce65411dcb7fb9f6ce008064/earlydisplay-11.0.15.jar
+[12:41:37] [main/INFO] [ne.ne.fm.lo.FMLLoader/]:  - /root/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.15/69ddd98736a6b095783523404d1af8992842722/loader-11.0.15.jar
+[12:41:37] [main/INFO] [ne.ne.fm.lo.ImmediateWindowHandler/]: Not loading early display in headless mode.
+[12:41:37] [main/INFO] [ne.ne.fm.lo.mo.lo.GameLocator/]: Detected a joined NeoForge and Minecraft configuration. Applying filtering...
+[12:41:38] [main/INFO] [ne.ne.fm.lo.mo.lo.InDevFolderLocator/CORE]: Got mod coordinates volcanicmason-26.1.2.81%%/root/home/forks/worktrees/volcanicmason-26.1.2.81/build/resources/main:volcanicmason-26.1.2.81%%/root/home/forks/worktrees/volcanicmason-26.1.2.81/build/classes/java/main from env
+[12:41:39] [main/WARN] [ne.ne.ja.se.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: library:mixinextras.neoforge. Using jar(/root/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-neoforge/0.5.4/3cb0fec08c25e18fddf797fbdc1b9db83dc4e92f/mixinextras-neoforge-0.5.4.jar)
+[12:41:39] [main/INFO] [ne.ne.fm.lo.mo.lo.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[12:41:39] [main/INFO] [ne.ne.fm.lo.mo.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Domum Ornamentum 1.0.0-local (domum_ornamentum)
+		MineColonies 1.1.1397-26.1.2 (minecolonies)
+		Minecraft 26.1.2 (minecraft)
+		Multi-Piston 0.0.1-26.1.2 (multipiston)
+		NeoForge 26.1.2.81 (neoforge)
+		SEMI 1.1.24-semi151a6c88+26.1.2+neoforge (emi)
+		Structurize 0.0.1-26.1.2 (structurize)
+		UI Library Mod 0.0.1-26.1.2 (blockui)
+		Volcanic Mason 1.0.3-26.1.2 (volcanicmason)
+		Volcanic Mason integration probe 1 (vmqa)
+[12:41:42] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/root/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.17.3+mixin.0.8.7/41c4a3984a80f4679e759fb9f495587acc5cdac7/sponge-mixin-0.17.3+mixin.0.8.7.jar Service=FML Env=SERVER
+[12:41:42] [main/INFO] [ne.ne.fm.lo.FMLLoader/]: Loading FML Plugins:
+[12:41:42] [main/INFO] [ne.ne.fm.lo.FMLLoader/]:  - /root/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.2.81/17cf8f8a1946194c7fa4beae83ec19d98d2e9022/neoforge-26.1.2.81-universal.jar > net.neoforged.neoforge-coremods-26.1.2.81.jar
+[12:41:43] [main/INFO] [ne.ne.fm.lo.FMLLoader/]: Building game content classloader:
+ - blockui (jar(/root/.m2/repository/com/ldtteam/blockui/0.0.1-26.1.2/blockui-0.0.1-26.1.2.jar))
+ - domum_ornamentum (jar(/root/.m2/repository/com/ldtteam/domum-ornamentum/1.0.0-local/domum-ornamentum-1.0.0-local-main.jar))
+ - emi (jar(/root/.m2/repository/dev/emi/emi-neoforge/1.1.24-semi151a6c88+26.1.2/emi-neoforge-1.1.24-semi151a6c88+26.1.2.jar))
+ - minecolonies (jar(/root/home/forks/MineColonies/build/libs/minecolonies-1.1.1397-26.1.2.jar))
+ - minecraft (composite(filtered(jar(/root/home/forks/worktrees/volcanicmason-26.1.2.81/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/26.1.2.81/neoforge-26.1.2.81.jar)), filtered(jar(/root/home/forks/worktrees/volcanicmason-26.1.2.81/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/26.1.2.81/neoforge-26.1.2.81.jar))))
+ - mixinextras.neoforge (jar(/root/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-neoforge/0.5.4/3cb0fec08c25e18fddf797fbdc1b9db83dc4e92f/mixinextras-neoforge-0.5.4.jar))
+ - multipiston (jar(/root/.m2/repository/com/ldtteam/multipiston/0.0.1-26.1.2/multipiston-0.0.1-26.1.2.jar))
+ - neoforge (composite(filtered(jar(/root/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.2.81/17cf8f8a1946194c7fa4beae83ec19d98d2e9022/neoforge-26.1.2.81-universal.jar))))
+ - net.neoforged.fml.generated (empty(VirtualJar/net.neoforged.fml.generated))
+ - structurize (jar(/root/.m2/repository/com/ldtteam/structurize/0.0.1-26.1.2/structurize-0.0.1-26.1.2.jar))
+ - vmqa (jar(mods/vmqa.jar))
+ - volcanicmason (composite(folder(/root/home/forks/worktrees/volcanicmason-26.1.2.81/build/resources/main), folder(/root/home/forks/worktrees/volcanicmason-26.1.2.81/build/classes/java/main)))
+[12:41:43] [main/INFO] [ne.ne.fm.lo.FMLLoader/]: Built game content classloader in 403ms
+[12:41:50] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.4).
+[12:42:15] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[12:42:15] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[12:42:15] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[12:42:15] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[12:42:15] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[12:42:15] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [time, set, time] and [time, set, timemarker] with inputs: [0, 0s, 0d, 0t]
+[12:42:15] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [time, set, timemarker] and [time, set, time] with inputs: [012]
+[12:42:15] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [time, of, clock, set, time] and [time, of, clock, set, timemarker] with inputs: [0, 0s, 0d, 0t]
+[12:42:15] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [time, of, clock, set, timemarker] and [time, of, clock, set, time] with inputs: [012]
+[12:42:15] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [waypoint, modify, waypoint, color, reset] and [waypoint, modify, waypoint, color, color] with inputs: [reset]
+[12:42:16] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 26.1.2.81, for MC 26.1.2
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Volcanic Mason
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Warped Netherlands
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Stalactite Caves
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Space Wars
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Shire
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Desert Oasis
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Pagoda
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Minecolonies Original
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Nordic Spruce
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Medieval Spruce
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Medieval Oak
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Medieval Dark Oak
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Medieval Birch
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Lost Mesa City
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Jungle Treehouse
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Incan
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Fortress
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Dark Oak Treehouse
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Colonial
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Cavern
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Caledonia
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Urban Birch
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Ancient Athens
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Urban Savanna
+[12:42:21] [Structurize IO Worker #0/WARN] [structurize/]: Failed loading packs from main folder path: .
+[12:42:21] [Structurize IO Worker #0/WARN] [structurize/]: Failed loading client packs from main folder path: .
+[12:42:21] [Structurize IO Worker #0/INFO] [structurize/]: Finished discovering Server Structure packs
+[12:42:21] [modloading-worker-0/WARN] [minecolonies/]: Register mappings
+[12:42:22] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[12:42:35] [Worker-Main-1/INFO] [minecraft/Main]: No existing world data, creating new world
+[12:42:49] [main/INFO] [minecraft/RecipeManager]: Loaded 1817 recipes
+[12:42:49] [main/INFO] [minecraft/AdvancementTree]: Loaded 1891 advancements
+[12:42:49] [main/INFO] [ne.ne.ne.co.cr.RecipePriorityManager/]: Loaded 0 recipe priority overrides
+[12:42:49] [main/INFO] [minecolonies/]: Research loading...
+[12:42:50] [main/INFO] [minecolonies/]: Research loaded. Located 4 branches, 222 researches and 111 effects.
+[12:42:50] [main/WARN] [minecolonies/]: Read 1357 items with their nbt keys for compatibility.
+[12:42:50] [main/INFO] [minecolonies/]: [Study items Loader]: Starting reload...
+[12:42:50] [main/INFO] [minecolonies/]: [Study items Loader]: Finished reloading. 2 entries created.
+[12:42:50] [main/INFO] [minecolonies/]: Beginning load of custom recipes for colony workers
+[12:42:50] [main/INFO] [minecolonies/]: Loaded 163 recipes for 16 crafters
+[12:42:50] [main/INFO] [minecolonies/]: Loading quests from data
+[12:42:50] [main/INFO] [minecolonies/]: Finished loading quests from data
+[12:42:51] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 26.1.2
+[12:42:51] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
+[12:42:51] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
+[12:42:51] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[12:42:51] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on 127.0.0.1:25941
+2026-10-24T09:42:51.475770970Z Server thread ERROR An exception occurred processing Appender DebugFile
+org.apache.logging.log4j.core.appender.AppenderLoggingException: java.lang.NoClassDefFoundError: Could not initialize class io.netty.channel.kqueue.Native
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:164)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:133)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:124)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:88)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:711)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:669)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:645)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:554)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:67)
+	at org.apache.logging.log4j.core.Logger.logMessage(Logger.java:173)
+	at org.apache.logging.slf4j.Log4jLogger.log(Log4jLogger.java:374)
+	at io.netty.util.internal.logging.LocationAwareSlf4JLogger.log(LocationAwareSlf4JLogger.java:46)
+	at io.netty.util.internal.logging.LocationAwareSlf4JLogger.debug(LocationAwareSlf4JLogger.java:129)
+	at io.netty.channel.kqueue.KQueue.<clinit>(KQueue.java:54)
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.network.EventLoopGroupHolder.remote(EventLoopGroupHolder.java:59)
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.network.ServerConnectionListener.startTcpServerListener(ServerConnectionListener.java:57)
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.dedicated.DedicatedServer.initServer(DedicatedServer.java:261)
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:735)
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:300)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class io.netty.channel.kqueue.Native
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:547)
+	at org.apache.logging.log4j.util.LoaderUtil.loadClass(LoaderUtil.java:212)
+	at org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.lambda$static$1(ThrowableExtendedStackTraceRenderer.java:196)
+	at org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.loadClass(ThrowableExtendedStackTraceRenderer.java:180)
+	at org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.createClassResourceInfoByName(ThrowableExtendedStackTraceRenderer.java:166)
+	at org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.ofThrowable(ThrowableExtendedStackTraceRenderer.java:96)
+	at org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer$ExtendedContext.access$000(ThrowableExtendedStackTraceRenderer.java:81)
+	at org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.createContext(ThrowableExtendedStackTraceRenderer.java:43)
+	at org.apache.logging.log4j.core.pattern.ThrowableExtendedStackTraceRenderer.createContext(ThrowableExtendedStackTraceRenderer.java:34)
+	at org.apache.logging.log4j.core.pattern.ThrowableStackTraceRenderer.renderThrowable(ThrowableStackTraceRenderer.java:55)
+	at org.apache.logging.log4j.core.pattern.ThrowablePatternConverter.format(ThrowablePatternConverter.java:130)
+	at org.apache.logging.log4j.core.layout.PatternLayout$NoFormatPatternSerializer.toSerializable(PatternLayout.java:354)
+	at org.apache.logging.log4j.core.layout.PatternLayout.toText(PatternLayout.java:251)
+	at org.apache.logging.log4j.core.layout.PatternLayout.encode(PatternLayout.java:237)
+	at org.apache.logging.log4j.core.layout.PatternLayout.encode(PatternLayout.java:57)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.directEncodeEvent(AbstractOutputStreamAppender.java:227)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:220)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:211)
+	at org.apache.logging.log4j.core.appender.RollingRandomAccessFileAppender.append(RollingRandomAccessFileAppender.java:275)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:160)
+	... 19 more
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.IllegalStateException: Only supported on OSX/BSD [in thread "Server thread"]
+	at io.netty.channel.kqueue.Native.loadNativeLibrary(Native.java:159)
+	at io.netty.channel.kqueue.Native.<clinit>(Native.java:76)
+	at io.netty.channel.kqueue.KQueue.<clinit>(KQueue.java:38)
+	... 6 more
+
+[12:42:51] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[12:42:51] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
+[12:42:51] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[12:42:51] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
+[12:42:52] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "vmqa-world"
+[12:42:52] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Selecting global world spawn...
+[12:42:57] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Loading 0 persistent chunks...
+[12:42:57] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Preparing spawn area: 100%
+[12:42:57] [Server thread/INFO] [minecraft/LoggingLevelLoadListener]: Time elapsed: 4584 ms
+[12:42:57] [Server thread/INFO] [minecraft/DedicatedServer]: Done (5.512s)! For help, type "help"
+[12:42:57] [Server thread/INFO] [minecraft/DedicatedServer]: Starting remote control listener
+[12:42:57] [Server thread/INFO] [minecraft/GenericThread]: Thread RCON Listener started
+[12:42:57] [Server thread/INFO] [minecraft/RconThread]: RCON running on 127.0.0.1:25942
+[12:42:57] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[vmqa-world]'/minecraft:overworld
+[12:42:57] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[vmqa-world]'/minecraft:the_end
+[12:42:57] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[vmqa-world]'/minecraft:the_nether
+[12:42:58] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[12:42:58] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[12:42:58] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[12:42:58] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[12:42:58] [Server thread/WARN] [minecraft/MinecraftServer]: Low disk space! Might not be able to save the world.
+[12:42:58] [Server thread/INFO] [ne.ne.ne.se.pe.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[12:43:05] [Server thread/WARN] [minecolonies/]: Starting Compat Discovery
+[12:43:06] [Server thread/INFO] [minecolonies/]: Finished discovering Ores 19 22
+[12:43:06] [Server thread/INFO] [minecolonies/]: Finished discovering saplings 15
+[12:43:06] [Server thread/INFO] [minecolonies/]: Finished discovering plantables 19
+[12:43:06] [Server thread/INFO] [minecolonies/]: Finished discovering food 106 120
+[12:43:06] [Server thread/INFO] [minecolonies/]: Finished discovering fuel 281
+[12:43:06] [Server thread/INFO] [minecolonies/]: Finished discovering flowers 31
+[12:43:06] [Server thread/INFO] [minecolonies/]: Finished discovering items 2057
+[12:43:06] [Server thread/INFO] [minecolonies/]: Finished discovering compostables 245
+VMQA PASS job registry and namespace
+VMQA PASS building registry
+VMQA PASS research vulcanicmason
+VMQA PASS research stone
+VMQA PASS research basalt
+VMQA PASS research obsidian
+VMQA PASS research soul_sand
+VMQA PASS hut crafting recipe loaded
+VMQA PASS both crusher recipes loaded
+VMQA PASS factory NBT roundtrip COBBLESTONE
+VMQA PASS factory network roundtrip COBBLESTONE
+VMQA PASS factory NBT roundtrip STONE
+VMQA PASS factory network roundtrip STONE
+VMQA PASS factory NBT roundtrip OBSIDIAN
+VMQA PASS factory network roundtrip OBSIDIAN
+VMQA PASS factory NBT roundtrip BASALT
+VMQA PASS factory network roundtrip BASALT
+VMQA PASS first lookup of blueprint generator tag
+VMQA PASS spawn real citizen
+VMQA PASS assign profession
+VMQA PASS job class
+VMQA PASS AI building binding
+java.lang.AssertionError: harvest COBBLESTONE
+	at TRANSFORMER/vmqa@1/dev.ferriarnus.volcanicmason.qa.ServerProbe.check(ServerProbe.java:32)
+	at TRANSFORMER/vmqa@1/dev.ferriarnus.volcanicmason.qa.ServerProbe.run(ServerProbe.java:167)
+	at TRANSFORMER/vmqa@1/dev.ferriarnus.volcanicmason.qa.ServerProbe.tick(ServerProbe.java:44)
+	at net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27)
+	at net.neoforged.bus.EventBus.post(EventBus.java:360)
+	at net.neoforged.bus.EventBus.post(EventBus.java:328)
+	at TRANSFORMER/neoforge@26.1.2.81/net.neoforged.neoforge.event.EventHooks.fireServerTickPost(EventHooks.java:1027)
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1025)
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.dedicated.DedicatedServer.tickServer(DedicatedServer.java:357)
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.processPacketsAndTick(MinecraftServer.java:1035)
+VMQA FAIL
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:776)
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:300)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+[12:43:16] [Server thread/WARN] [minecraft/MinecraftServer]: Can't keep up! Is the server overloaded? Running 8649ms or 172 ticks behind
+[12:43:19] [RCON Listener #1/INFO] [minecraft/GenericThread]: Thread RCON Client /127.0.0.1 started
+[12:43:19] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[12:43:19] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[12:43:19] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[12:43:19] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[12:43:19] [Server thread/WARN] [minecraft/MinecraftServer]: Low disk space! Might not be able to save the world.
+[12:43:19] [Server thread/INFO] [minecraft/MinecraftServer]: [Rcon: Saved the game]
+[12:43:19] [RCON Client /127.0.0.1 #2/INFO] [minecraft/RconClient]: Thread RCON Client /127.0.0.1 shutting down
+[12:43:19] [RCON Listener #1/INFO] [minecraft/GenericThread]: Thread RCON Client /127.0.0.1 started
+[12:43:19] [Server thread/INFO] [minecraft/MinecraftServer]: [Rcon: Stopping the server]
+[12:43:19] [RCON Client /127.0.0.1 #3/INFO] [minecraft/RconClient]: Thread RCON Client /127.0.0.1 shutting down
+[12:43:19] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[12:43:19] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[12:43:19] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[12:43:20] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[vmqa-world]'/minecraft:overworld
+[12:43:25] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[vmqa-world]'/minecraft:the_end
+[12:43:25] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[vmqa-world]'/minecraft:the_nether
+[12:43:25] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[12:43:25] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[12:43:25] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[12:43:25] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[12:43:25] [Server thread/INFO] [minecraft/GenericThread]: Thread RCON Listener stopped
+[12:43:25] [main/INFO] [ne.ne.fm.lo.FMLLoader/]: Closing FML Loader 2fbaacbd
+[12:43:25] [main/INFO] [ne.ne.fm.ModLoader/]: Clearing ModLoader
+
+[Incubating] Problems report is available at: file:///root/home/forks/worktrees/volcanicmason-26.1.2.81/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.2.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 2m 54s
+18 actionable tasks: 2 executed, 16 up-to-date

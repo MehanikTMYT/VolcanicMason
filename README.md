@@ -19,3 +19,14 @@ Due to a technical limitation, the Volcanic Mason needs to be it's onw style, an
 
 ## Feedback
 In case you have some issues,feedback/ideas or builds you would like to share, feel free to reach out here in the github issues!
+
+## Minecraft 26.1.2 port
+
+This branch targets NeoForge **26.1.2.81** and **Java 25** using the workspace's
+ported MineColonies 1.1.1397 stack. See [the port and review report](docs/PORT_REVIEW_RU.md)
+for dependency hashes, build instructions, test evidence and remaining manual checks.
+
+Build the release with `./gradlew build`. The release artifact is
+`build/libs/volcanicmason-1.0.3-26.1.2.jar`.
+The optional `qaJar` task produces a separate destructive-test-world probe; never
+install the `-qa.jar` on a normal game server.

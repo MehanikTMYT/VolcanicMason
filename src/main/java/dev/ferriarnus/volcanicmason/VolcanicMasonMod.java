@@ -10,6 +10,7 @@ import dev.ferriarnus.volcanicmason.buildings.BuildingRegistry;
 import dev.ferriarnus.volcanicmason.config.VolcanicMasonConfig;
 import dev.ferriarnus.volcanicmason.data.VolcanicResearchProvider;
 import dev.ferriarnus.volcanicmason.jobs.JobsRegistry;
+import dev.ferriarnus.volcanicmason.jobs.MasonEquipment;
 import dev.ferriarnus.volcanicmason.settings.ModeSetting;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
@@ -45,13 +46,15 @@ public class VolcanicMasonMod {
 
         BuildingRegistry.register(modEventBus);
         JobsRegistry.register(modEventBus);
+        MasonEquipment.register(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, VolcanicMasonConfig.COMMON_SPEC);
     }
 
     @SubscribeEvent
     public static void preInit(final FMLCommonSetupEvent event) {
-        StandardFactoryController.getInstance().registerNewFactory(new ModeSetting.ModeSettingFactory());
+        // MineColonies' factory maps are not thread-safe; common setup is parallel.
+        event.enqueueWork(() -> StandardFactoryController.getInstance().registerNewFactory(new ModeSetting.ModeSettingFactory()));
     }
 
     @SubscribeEvent

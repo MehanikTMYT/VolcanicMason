@@ -26,7 +26,7 @@ public class JobsRegistry {
             .createJobEntry());
 
     private static DeferredHolder<JobEntry, JobEntry> register(final DeferredRegister<JobEntry> deferredRegister, final String path, final Supplier<JobEntry> supplier) {
-        ModJobs.jobs.add(Identifier.fromNamespaceAndPath(Constants.MOD_ID, path));
+        ModJobs.jobs.add(Identifier.fromNamespaceAndPath(VolcanicMasonMod.MODID, path));
         return deferredRegister.register(path, supplier);
     }
 }

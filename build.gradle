@@ -60,7 +60,7 @@ runs {
         // Recommended logging level for the console
         // You can set various levels here.
         // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
-        systemProperty 'forge.logging.console.level', 'debug'
+        systemProperty 'forge.logging.console.level', 'info'
 
         workingDirectory project.layout.projectDirectory.dir('run').dir(name)
 
@@ -85,11 +85,8 @@ runs {
         systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
     }
 
-    // NeoGradle 7.1.x / NeoForge 26.1.2 split the old 'data' run type into 'clientData' and
-    // 'serverData'; only client-side data generation is configured here, matching what this mod
-    // previously ran under the single 'data' run type (this mod ships no datagen providers, so
-    // this run type is unused at present but kept consistent with the rest of the 26.1.2 style).
-    clientData {
+    // Research generation subscribes to GatherDataEvent.Server.
+    serverData {
         // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
         arguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
     }
@@ -203,4 +200,19 @@ idea {
         downloadSources = true
         downloadJavadoc = true
     }
+}
+
+// Opt-in integration probe, excluded from the release jar.
+sourceSets {
+    qa {
+        compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath
+        runtimeClasspath += output + compileClasspath
+    }
+}
+tasks.register('qaJar', Jar) {
+    archiveClassifier = 'qa'
+    from sourceSets.qa.output
+}
+tasks.named('jar', Jar).configure {
+    from('LICENSE')
 }

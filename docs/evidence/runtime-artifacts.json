@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/root/.m2/repository/com/ldtteam/blockui/0.0.1-26.1.2/blockui-0.0.1-26.1.2.jar",
+    "sha256": "b53532779136d4b4453a5b50c7bec6014d5a7b7339c1a2bc933fc7c8183308c3"
+  },
+  {
+    "path": "/root/.m2/repository/com/ldtteam/structurize/0.0.1-26.1.2/structurize-0.0.1-26.1.2.jar",
+    "sha256": "9dbe1f5e9984e903ac51a3e54abb203044cd4c0d53be64113de9127c0d74d6c5"
+  },
+  {
+    "path": "/root/.m2/repository/com/ldtteam/multipiston/0.0.1-26.1.2/multipiston-0.0.1-26.1.2.jar",
+    "sha256": "649b975c60f721eb3b1db25bd281ccc1474ced5a0aeab61ce644e79410396af6"
+  },
+  {
+    "path": "/root/.m2/repository/com/ldtteam/domum-ornamentum/1.0.0-local/domum-ornamentum-1.0.0-local-main.jar",
+    "sha256": "a7139f3b46901c9ce60bf25633fa94ad552babd14f910dfec7b9356d63fd3994"
+  },
+  {
+    "path": "/root/.m2/repository/dev/emi/emi-neoforge/1.1.24-semi151a6c88+26.1.2/emi-neoforge-1.1.24-semi151a6c88+26.1.2.jar",
+    "sha256": "8dfdeb51d03a2dfd0e830b045847bc211b75cd83c35f3a305a161c2197539f93"
+  },
+  {
+    "path": "/root/home/forks/MineColonies/build/libs/minecolonies-1.1.1397-26.1.2.jar",
+    "sha256": "e9085e3eead8d1d0607186a4e32b8ce3f61ff5012f1cd061b14872c628d8a3af"
+  }
+]

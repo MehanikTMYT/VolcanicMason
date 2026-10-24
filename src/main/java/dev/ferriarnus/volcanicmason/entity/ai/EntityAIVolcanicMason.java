@@ -1,12 +1,16 @@
 package dev.ferriarnus.volcanicmason.entity.ai;
 
 import com.google.common.reflect.TypeToken;
+import net.minecraft.world.InteractionHand;
+import dev.ferriarnus.volcanicmason.jobs.MasonEquipment;
+import com.minecolonies.core.util.WorkerUtil;
+import com.minecolonies.core.util.citizenutils.CitizenItemUtils;
+import com.minecolonies.api.entity.ai.JobStatus;
 import com.minecolonies.api.colony.requestsystem.requestable.StackList;
 import com.minecolonies.api.entity.ai.statemachine.AITarget;
 import com.minecolonies.api.entity.ai.statemachine.states.AIWorkerState;
 import com.minecolonies.api.entity.ai.statemachine.states.IAIState;
 import com.minecolonies.api.entity.citizen.VisibleCitizenStatus;
-import com.minecolonies.api.items.ModItems;
 import com.minecolonies.api.research.util.ResearchConstants;
 import com.minecolonies.api.util.InventoryUtils;
 import com.minecolonies.api.util.ItemStackUtils;
@@ -15,26 +19,20 @@ import com.minecolonies.api.util.constant.StatisticsConstants;
 import com.minecolonies.api.util.constant.translation.RequestSystemTranslationConstants;
 import com.minecolonies.core.MineColonies;
 import com.minecolonies.core.colony.buildings.modules.BuildingModules;
-import com.minecolonies.core.colony.buildings.modules.BuildingStatisticsModule;
-import com.minecolonies.core.colony.buildings.workerbuildings.BuildingMiner;
 import com.minecolonies.core.entity.ai.workers.AbstractEntityAIInteract;
 import dev.ferriarnus.volcanicmason.buildings.BuildingVolcanicMason;
 import dev.ferriarnus.volcanicmason.jobs.JobVolcanicMason;
 import dev.ferriarnus.volcanicmason.settings.Modes;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluids;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -99,10 +97,13 @@ public class EntityAIVolcanicMason extends AbstractEntityAIInteract<JobVolcanicM
             return getState();
         }
 
-        final ItemStack stack = worker.getInventoryCitizen().getStackInSlot(slot);
-        if (InventoryUtils.attemptReduceStackInItemHandler(worker.getInventoryCitizen(), stack, 1)) {
-            world.setBlock(posToPlace, Fluids.LAVA.defaultFluidState().createLegacyBlock(), UPDATE_FLAG);
-            stack.shrink(1);
+        // Water can flow back into an obsidian generator after harvesting.
+        // Recheck after walking: allow air/water, but never replace solid or waterlogged blocks.
+        final BlockState placementState = world.getBlockState(posToPlace);
+        if (!placementState.isAir() && !placementState.is(Blocks.WATER)) {
+            return START_WORKING;
+        }
+        if (world.setBlock(posToPlace, Fluids.LAVA.defaultFluidState().createLegacyBlock(), UPDATE_FLAG)) {
             worker.getInventoryCitizen().setStackInSlot(slot, new ItemStack(Items.BUCKET));
             return START_WORKING;
         }
@@ -142,6 +143,31 @@ public class EntityAIVolcanicMason extends AbstractEntityAIInteract<JobVolcanicM
         }
 
         return getState();
+    }
+
+    @Override
+    public boolean holdEfficientTool(@NotNull BlockState target, BlockPos pos) {
+        final var type = MasonEquipment.PICKAXE.get();
+        final int required = WorkerUtil.getCorrectHarvestLevelForBlock(target);
+        int bestSlot = -1;
+        int bestLevel = Integer.MAX_VALUE;
+        for (int slot = 0; slot < worker.getInventoryCitizen().getSlots(); slot++) {
+            ItemStack stack = worker.getInventoryCitizen().getStackInSlot(slot);
+            int level = type.getMiningLevel(stack);
+            if (level >= 0 && level < bestLevel && stack.isCorrectToolForDrops(target)
+                && ItemStackUtils.verifyEquipmentLevel(stack, level, required, building.getMaxEquipmentLevel())) {
+                bestSlot = slot;
+                bestLevel = level;
+            }
+        }
+        if (bestSlot >= 0) {
+            CitizenItemUtils.setHeldItem(worker, InteractionHand.MAIN_HAND, bestSlot);
+            worker.getCitizenData().setJobStatus(JobStatus.WORKING);
+            return true;
+        }
+        // Use the standard request/retrieval pipeline with the component-aware category.
+        checkForToolOrWeapon(type, required);
+        return false;
     }
 
     @Override
