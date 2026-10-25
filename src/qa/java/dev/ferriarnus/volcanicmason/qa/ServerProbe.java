@@ -35,6 +35,10 @@ public class ServerProbe {
     private ServerLevel pendingLevel;
     private int elapsed;
     public ServerProbe() {
+        if ("autonomous".equals(System.getenv("VMQA_SCENARIO"))) {
+            new AutonomousProbe();
+            return;
+        }
         NeoForge.EVENT_BUS.addListener(this::started);
         NeoForge.EVENT_BUS.addListener(this::tick);
     }

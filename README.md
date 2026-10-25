@@ -30,3 +30,8 @@ Build the release with `./gradlew build`. The release artifact is
 `build/libs/volcanicmason-1.0.3-26.1.2.jar`.
 The optional `qaJar` task produces a separate destructive-test-world probe; never
 install the `-qa.jar` on a normal game server.
+
+Autonomous worker cycles passed the follow-up server probe. Client acceptance is
+currently blocked by the local MineColonies artifact loading ClientLevel on a
+dedicated server when a player enters the colony. See the
+[reproduction and evidence](docs/CLIENT_BLOCKER_RU.md) before using this stack.

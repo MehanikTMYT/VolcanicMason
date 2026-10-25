@@ -15,9 +15,26 @@
     "junit": "NO-SOURCE"
   },
   "client": {
-    "status": "PARTIAL",
+    "status": "BLOCKED",
     "main_menu": true,
     "dependency_model_errors": 7,
-    "full_colony_gameplay": "NOT TESTED"
+    "full_colony_gameplay": "NOT TESTED",
+    "connected_to_dedicated_server": true,
+    "colony_entry": "FAIL: MineColonies loads ClientLevel on dedicated server",
+    "gui": "NOT REACHED",
+    "clean_exit": true,
+    "log": "client-gameplay.log",
+    "blocker": "../CLIENT_BLOCKER_RU.md"
+  },
+  "server-autonomous-final": {
+    "status": "PASS",
+    "checks": 18,
+    "normal_citizen_ai": true,
+    "clean_save_and_stop": true,
+    "limits": [
+      "flat fixture, not blueprint navigation",
+      "daytime held fixed",
+      "no courier or sleep cycle"
+    ]
   }
 }
