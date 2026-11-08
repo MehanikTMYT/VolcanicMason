@@ -151,6 +151,24 @@ public class ServerProbe {
         level.setBlock(new BlockPos(6,102,-2),Blocks.LAVA.defaultBlockState(),3);
         colony = saved.createColony(level, "VMQA", HUT);
         colony.setStructurePack("Volcanic Mason");
+        String packetWriter = System.getenv("VMQA_PACKET_WRITER");
+        if (packetWriter != null) {
+            var packet = new net.minecraft.network.RegistryFriendlyByteBuf(
+                io.netty.buffer.Unpooled.buffer(), level.registryAccess());
+            try {
+                Class.forName(packetWriter).getMethod("serializeNetworkData",
+                    com.minecolonies.core.colony.Colony.class,
+                    net.minecraft.network.RegistryFriendlyByteBuf.class, boolean.class)
+                    .invoke(null, colony, packet, true);
+                check(packet.readUtf().equals(colony.getName()), "colony packet name on dedicated server");
+                check(packet.readUtf().equals(level.dimension().identifier().toString()), "colony packet dimension");
+                check(packet.readBlockPos().equals(colony.getCenter()), "colony packet center");
+                check(packet.readableBytes() > 0, "colony packet remaining payload");
+            } finally {
+                packet.release();
+            }
+        }
+
         level.setBlock(HUT, BlockRegistry.VOLCANIC_MASON.get().defaultBlockState(),3);
         var tile = (AbstractTileEntityColonyBuilding) level.getBlockEntity(HUT);
         tile.setStructurePack(com.ldtteam.structurize.storage.StructurePacks.getStructurePack("Volcanic Mason"));
